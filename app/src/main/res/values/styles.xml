@@ -1,0 +1,9 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/african_violet</item>
+        <item name="colorPrimaryDark">@color/lavender_blush</item>
+        <item name="colorAccent">@color/periwinkle</item>
+    </style>
+
+</resources>

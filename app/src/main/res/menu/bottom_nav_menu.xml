@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/head_lines"
+        android:icon="@drawable/head_lines"
+        android:title="Headlines" />
+    <item
+        android:id="@+id/news_for_you"
+        android:icon="@drawable/news_for_you"
+        android:title="News for you" />
+</menu>
