@@ -20,7 +20,7 @@ import Models.NewsApi;
 public class NewsFragment extends Fragment implements View.OnClickListener {
 
     RecyclerView recyclerView;
-    HeadLinesRecyclerViewAdapter adapter;
+    RecyclerViewAdapter adapter;
     ProgressBar progressBar;
 
     Button general_btn, business_btn, sports_btn, science_btn, health_btn, entertainment_btn;
@@ -34,31 +34,24 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
         general_btn = view.findViewById(R.id.general_btn);
         general_btn.setOnClickListener(this);
 
-
         business_btn = view.findViewById(R.id.business_btn);
         business_btn.setOnClickListener(this);
         business_btn.performClick();
 
-
         entertainment_btn = view.findViewById(R.id.entertainment_btn);
         entertainment_btn.setOnClickListener(this);
-
 
         health_btn = view.findViewById(R.id.health_btn);
         health_btn.setOnClickListener(this);
 
-
         science_btn = view.findViewById(R.id.science_btn);
         science_btn.setOnClickListener(this);
-
 
         sports_btn = view.findViewById(R.id.sports_btn);
         sports_btn.setOnClickListener(this);
 
-
         progressBar = view.findViewById(R.id.progressBar);
         progressBar.setVisibility(View.VISIBLE);
-
 
         return view;
     }
@@ -70,7 +63,6 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
             loadData(headLinesList);
             progressBar.setVisibility(View.GONE);
         }
-
         @Override
         public void onError(String message) {
         }
@@ -79,7 +71,7 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
     public void loadData(List<HeadLines> headLinesList) {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(NewsFragment.this.getContext(), 1));
-        adapter = new HeadLinesRecyclerViewAdapter(headLinesList, NewsFragment.this.getContext());
+        adapter = new RecyclerViewAdapter(headLinesList, NewsFragment.this.getContext());
         recyclerView.setAdapter(adapter);
     }
     private Button lastClickedButton = null;

@@ -8,13 +8,13 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class HeadLinesViewHolder extends RecyclerView.ViewHolder {
+public class RecyclerViewViewHolder extends RecyclerView.ViewHolder {
     TextView headLines_textView, source_textView;
     ImageView headlines_imageView;
 
     CardView cardView;
 
-    public HeadLinesViewHolder(@NonNull View itemView) {
+    public RecyclerViewViewHolder(@NonNull View itemView) {
         super(itemView);
         headLines_textView = (TextView) itemView.findViewById(R.id.head_lines_textView);
         source_textView = (TextView) itemView.findViewById(R.id.source_textView);

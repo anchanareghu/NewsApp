@@ -15,24 +15,24 @@ import java.util.List;
 
 import Models.HeadLines;
 
-public class HeadLinesRecyclerViewAdapter extends RecyclerView.Adapter<HeadLinesViewHolder> {
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewViewHolder> {
     List<HeadLines> headlines;
     Context context;
 
-    public HeadLinesRecyclerViewAdapter(List<HeadLines> headlines, Context context) {
+    public RecyclerViewAdapter(List<HeadLines> headlines, Context context) {
         this.headlines = headlines;
         this.context = context;
     }
 
     @NonNull
     @Override
-    public HeadLinesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RecyclerViewViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_headline, parent, false);
-        return new HeadLinesViewHolder(view);
+        return new RecyclerViewViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull HeadLinesViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerViewViewHolder holder, int position) {
         if (headlines.get(position).getTitle() != null) {
             holder.headLines_textView.setText(headlines.get(position).getTitle());
         }

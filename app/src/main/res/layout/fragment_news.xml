@@ -6,6 +6,7 @@
     tools:context=".NewsFragment">
 
     <HorizontalScrollView
+        android:background="@color/african_violet"
         android:id="@+id/scrollView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -18,7 +19,7 @@
                 android:id="@+id/general_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="42dp"
-                android:background="@drawable/button_bg"
+                android:background="@null"
                 android:text="general"
                 android:textAllCaps="false" />
 
@@ -26,7 +27,7 @@
                 android:id="@+id/business_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="42dp"
-                android:background="@drawable/button_bg"
+                android:background="@null"
                 android:text="business"
                 android:textAllCaps="false" />
 
@@ -34,7 +35,7 @@
                 android:id="@+id/entertainment_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="42dp"
-                android:background="@drawable/button_bg"
+                android:background="@null"
                 android:text="entertainment"
                 android:textAllCaps="false" />
 
@@ -42,7 +43,7 @@
                 android:id="@+id/health_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="42dp"
-                android:background="@drawable/button_bg"
+                android:background="@null"
                 android:text="health"
                 android:textAllCaps="false" />
 
@@ -50,7 +51,7 @@
                 android:id="@+id/science_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="42dp"
-                android:background="@drawable/button_bg"
+                android:background="@null"
                 android:text="science"
                 android:textAllCaps="false" />
 
@@ -58,7 +59,7 @@
                 android:id="@+id/sports_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="42dp"
-                android:background="@drawable/button_bg"
+                android:background="@null"
                 android:text="sports"
                 android:textAllCaps="false" />
         </LinearLayout>
