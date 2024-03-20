@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 public class RecyclerViewViewHolder extends RecyclerView.ViewHolder {
     TextView headLines_textView, source_textView;
     ImageView headlines_imageView;
-
     CardView cardView;
 
     public RecyclerViewViewHolder(@NonNull View itemView) {
@@ -21,5 +20,4 @@ public class RecyclerViewViewHolder extends RecyclerView.ViewHolder {
         headlines_imageView = (ImageView) itemView.findViewById(R.id.headlines_imageView);
         cardView = (CardView) itemView.findViewById(R.id.headlines_cardView);
     }
-
 }

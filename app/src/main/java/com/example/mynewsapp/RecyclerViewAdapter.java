@@ -47,7 +47,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewViewHo
             public void onClick(View view) {
                 Intent intent = new Intent(context, NewsDetailActivity.class);
                 int position = holder.getAdapterPosition();
-                intent.putExtra("url",headlines.get(position).getUrl());
+                intent.putExtra("url", headlines.get(position).getUrl());
                 context.startActivity(intent);
             }
         });

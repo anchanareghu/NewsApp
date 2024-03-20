@@ -38,11 +38,9 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(R.id.head_lines);
     }
 
-
     public void openFragment(Fragment fragment) {
         fragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, fragment)
                 .commit();
     }
-
 }

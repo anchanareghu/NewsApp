@@ -22,7 +22,6 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
     RecyclerView recyclerView;
     RecyclerViewAdapter adapter;
     ProgressBar progressBar;
-
     Button general_btn, business_btn, sports_btn, science_btn, health_btn, entertainment_btn;
 
     @Override
@@ -56,13 +55,13 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
         return view;
     }
 
-
     public final OnFetchDataListener<NewsApi> listener = new OnFetchDataListener<NewsApi>() {
         @Override
         public void onFetchData(List<HeadLines> headLinesList, String message) {
             loadData(headLinesList);
             progressBar.setVisibility(View.GONE);
         }
+
         @Override
         public void onError(String message) {
         }
@@ -74,12 +73,12 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
         adapter = new RecyclerViewAdapter(headLinesList, NewsFragment.this.getContext());
         recyclerView.setAdapter(adapter);
     }
+
     private Button lastClickedButton = null;
 
     @Override
     public void onClick(View view) {
         Button currentButton = (Button) view;
-
         if (lastClickedButton != null) {
             lastClickedButton.setTextColor(getResources().getColor(R.color.white));
         }
@@ -90,5 +89,4 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
         ApiRequestManager apiRequestManager = new ApiRequestManager(view.getContext());
         apiRequestManager.getNewsHeadLines(listener, category, null);
     }
-
 }

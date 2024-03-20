@@ -38,7 +38,5 @@ public class NewsDetailActivity extends AppCompatActivity {
                 webView.loadUrl(url);
             }
         }
-
     }
-
 }
