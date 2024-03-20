@@ -14,12 +14,9 @@ import retrofit2.http.Query;
 
 public class ApiRequestManager {
     Context context;
-//    String API_KEY = "0c1b677b35164d83824218d0d3164ea1";
-
     public ApiRequestManager(Context context) {
         this.context = context;
     }
-
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("https://newsapi.org/v2/")
             .addConverterFactory(GsonConverterFactory.create())
