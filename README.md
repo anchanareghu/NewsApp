@@ -4,8 +4,8 @@ The Android News App provides users with access to a wide range of news articles
 
 ## Features
 
-- **Browse Top Headlines**: View the latest top headlines from around the world.
-- **Browse by Category**: Explore news articles categorized by topics such as business, entertainment, health, science, sports, technology, and more.
+- **Browse Top Headlines**: View the latest top headlines.
+- **Browse by Category**: Explore news articles categorized by topics such as business, entertainment, health, science, sports and more.
 - **Read Full Articles**: Read the full content of news articles within the app's interface.
 
 ## Dependencies
@@ -22,9 +22,9 @@ implementation ("com.squareup.picasso:picasso:2.8")
 
 ```
 
-5. **News API** : Provides a simple and easy-to-use RESTful API to fetch news data programmatically.
+5. **News API** : Provides a simple and easy-to-use RESTful API to fetch news data.
 
    [https://newsapi.org/](https://newsapi.org/)
 
 ## Screenshots
-<img src="app/src/main/res/drawable/screenshot_01.png" width="200" /> <img src="app/src/main/res/drawable/screenshot07.png" width="200" /> <img src="app/src/main/res/drawable/screenshot03.png" width="200" /> <img src="app/src/main/res/drawable/screenshot04.png" width="200" /> <img src="app/src/main/res/drawable/screenshot05.png" width="200" />
+<img src="app/src/main/res/drawable/screenshot_01.png" width="200" /> <img src="app/src/main/res/drawable/screenshot03.png" width="200" /> <img src="app/src/main/res/drawable/screenshot04.png" width="200" /> 
