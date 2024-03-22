@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
+import android.widget.SearchView;
 
 import java.util.List;
 
@@ -20,6 +21,7 @@ public class HeadlinesFragment extends Fragment {
     RecyclerView recyclerView;
     RecyclerViewAdapter adapter;
     ProgressBar progressBar;
+    SearchView searchView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,6 +31,20 @@ public class HeadlinesFragment extends Fragment {
         progressBar = view.findViewById(R.id.progressbar);
         progressBar.setVisibility(View.VISIBLE);
 
+        searchView = view.findViewById(R.id.search_view);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                ApiRequestManager apiRequestManager = new ApiRequestManager(HeadlinesFragment.this.getContext());
+                apiRequestManager.getNewsHeadLines(listener, "general", query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                           return true;
+            }
+        });
         ApiRequestManager apiRequestManager = new ApiRequestManager(this.getContext());
         apiRequestManager.getNewsHeadLines(listener, "general", null);
         return view;

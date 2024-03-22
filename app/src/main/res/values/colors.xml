@@ -2,9 +2,9 @@
 <resources>
     <color name="eminence">#6C3082</color>
 
-    <color name="periwinkle">#D0E0E6</color>
-    <color name="african_violet">#9C89B8</color>
-    <color name="lavender_blush">#F0E6EF</color>
+    <color name="lavender">#E8E1EF</color>
+    <color name="green">#9BB291</color>
+    <color name="tea_green">#D8EDCE</color>
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFF</color>

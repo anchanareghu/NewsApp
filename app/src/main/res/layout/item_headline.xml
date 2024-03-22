@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    android:backgroundTint="@color/lavender_blush"
+    android:backgroundTint="@color/tea_green"
     app:cardCornerRadius="12dp">
 
     <LinearLayout
@@ -16,7 +16,7 @@
         <ImageView
             android:id="@+id/headlines_imageView"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="200dp"
             android:background="@drawable/image_unavailable"
             android:scaleType="centerCrop" />
 
@@ -33,7 +33,7 @@
                 android:layout_marginBottom="8dp"
                 android:maxLines="3"
                 android:text="hello_news_fragment"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:text="source"
                 android:textStyle="bold"
-                android:textColor="@color/african_violet"
+                android:textColor="@color/green"
                 android:textSize="12sp" />
         </LinearLayout>
 
