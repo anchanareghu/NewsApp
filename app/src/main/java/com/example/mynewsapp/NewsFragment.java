@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+import java.util.Objects;
 
 import Models.HeadLines;
 import Models.NewsApi;
@@ -71,7 +72,7 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
 
         @Override
         public void onError(String message) {
-            getActivity().runOnUiThread(new Runnable() {
+            requireActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();

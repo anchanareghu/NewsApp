@@ -31,20 +31,19 @@ public class ApiRequestManager {
                 @Override
                 public void onResponse(Call<NewsApi> call, Response<NewsApi> response) {
                     if (!response.isSuccessful()) {
-                        Toast.makeText(context, "Error!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Request Failed !", Toast.LENGTH_SHORT).show();
                     }
                     assert response.body() != null;
                     fetchDataListener.onFetchData(response.body().getArticles(), response.message());
 
                 }
-
                 @Override
                 public void onFailure(Call<NewsApi> call, Throwable t) {
-                    fetchDataListener.onError("Request Failed!");
+                    fetchDataListener.onError("Request Failed !");
                 }
             });
         } catch (Exception e) {
-            e.printStackTrace();
+            fetchDataListener.onError("Request Failed !");
         }
 
     }

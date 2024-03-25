@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+import java.util.Objects;
 
 import Models.HeadLines;
 import Models.NewsApi;
@@ -22,15 +23,19 @@ public class HeadlinesFragment extends Fragment {
     RecyclerViewAdapter adapter;
     ProgressBar progressBar;
     SearchView searchView;
+    ApiRequestManager apiRequestManager;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        apiRequestManager = new ApiRequestManager(this.getContext());
+        apiRequestManager.getNewsHeadLines(listener, "general", null);
+
         View view = inflater.inflate(R.layout.fragment_headlines, container, false);
         recyclerView = view.findViewById(R.id.recyclerview_headlines);
         progressBar = view.findViewById(R.id.progressbar);
         progressBar.setVisibility(View.VISIBLE);
-
         searchView = view.findViewById(R.id.search_view);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -40,13 +45,10 @@ public class HeadlinesFragment extends Fragment {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                ApiRequestManager apiRequestManager = new ApiRequestManager(HeadlinesFragment.this.getContext());
-                apiRequestManager.getNewsHeadLines(listener, "general", newText);
+                apiRequestManager.getNewsHeadLines(listener, null, newText);
                 return true;
             }
         });
-        ApiRequestManager apiRequestManager = new ApiRequestManager(this.getContext());
-        apiRequestManager.getNewsHeadLines(listener, "general", null);
         return view;
     }
 
@@ -62,7 +64,7 @@ public class HeadlinesFragment extends Fragment {
 
         @Override
         public void onError(String message) {
-            getActivity().runOnUiThread(new Runnable() {
+            requireActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
