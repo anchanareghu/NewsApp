@@ -35,13 +35,13 @@ public class HeadlinesFragment extends Fragment {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                ApiRequestManager apiRequestManager = new ApiRequestManager(HeadlinesFragment.this.getContext());
-                apiRequestManager.getNewsHeadLines(listener, "general", query);
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
+                ApiRequestManager apiRequestManager = new ApiRequestManager(HeadlinesFragment.this.getContext());
+                apiRequestManager.getNewsHeadLines(listener, "general", newText);
                 return true;
             }
         });
