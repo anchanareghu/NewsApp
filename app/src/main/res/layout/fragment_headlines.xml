@@ -11,26 +11,31 @@
         android:layout_height="?android:attr/actionBarSize"
         android:background="?android:attr/colorPrimary">
 
-        <SearchView
-            android:id="@+id/search_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:queryBackground="@null"
-            android:queryHint="Search for topics,locations &amp; sources"
-            android:theme="@style/SearchViewStyle" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="wrap_content"
+            <SearchView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:contentDescription="app_logo"
-                android:scaleType="fitEnd"
-                android:src="@mipmap/ic_launcher_foreground" />
-        </RelativeLayout>
+                android:queryBackground="@null"
+                android:queryHint="Search for topics, locations &amp; sources"
+                android:theme="@style/SearchViewStyle" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="app_logo"
+                    android:scaleType="fitEnd"
+                    android:src="@mipmap/ic_launcher_foreground" />
+            </RelativeLayout>
+        </FrameLayout>
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
