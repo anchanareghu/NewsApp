@@ -27,4 +27,4 @@ implementation ("com.squareup.picasso:picasso:2.8")
    [https://newsapi.org/](https://newsapi.org/)
 
 ## Screenshots
-<img src="app/src/main/res/drawable/screenshot_01.png" width="200" /> <img src="app/src/main/res/drawable/screenshot03.png" width="200" /> <img src="app/src/main/res/drawable/screenshot04.png" width="200" /> 
+<img src="app/src/main/res/drawable/screenshot01.png" width="200" /> <img src="app/src/main/res/drawable/screenshot02.png" width="200" /> <img src="app/src/main/res/drawable/screenshot03.png" width="200" /> 
