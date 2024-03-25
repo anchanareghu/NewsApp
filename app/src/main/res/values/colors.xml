@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="eminence">#6C3082</color>
+    <color name="olive">#595421</color>
 
-    <color name="lavender">#E8E1EF</color>
-    <color name="green">#9BB291</color>
-    <color name="tea_green">#D8EDCE</color>
+    <color name="puce">#3E1E1E</color>
+    <color name="sage">#949983</color>
+    <color name="ivory">#EBE9E0</color>
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFF</color>

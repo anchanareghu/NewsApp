@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HeadlinesFragment">
-
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -21,7 +19,6 @@
             android:queryHint="Search for topics,locations &amp; sources"
             android:theme="@style/SearchViewStyle" />
 
-
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -30,6 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
+                android:contentDescription="app_logo"
                 android:scaleType="fitEnd"
                 android:src="@mipmap/ic_launcher_foreground" />
         </RelativeLayout>
@@ -39,8 +37,7 @@
         android:id="@+id/recyclerview_headlines"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar"
-        android:background="@color/lavender" />
+        android:layout_below="@id/toolbar" />
 
     <ProgressBar
         android:id="@+id/progressbar"

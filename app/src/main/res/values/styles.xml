@@ -1,9 +1,9 @@
 <resources>
 
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <item name="colorPrimary">@color/green</item>
-        <item name="colorPrimaryDark">@color/lavender</item>
-        <item name="colorAccent">@color/tea_green</item>
+        <item name="colorPrimary">@color/puce</item>
+        <item name="colorPrimaryDark">@color/sage</item>
+        <item name="colorAccent">@color/ivory</item>
     </style>
     <style
         name="SearchViewStyle"

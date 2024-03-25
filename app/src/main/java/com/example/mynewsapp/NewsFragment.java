@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,6 +24,12 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
     RecyclerViewAdapter adapter;
     ProgressBar progressBar;
     Button general_btn, business_btn, sports_btn, science_btn, health_btn, entertainment_btn;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setRetainInstance(true);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -82,7 +89,7 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
         if (lastClickedButton != null) {
             lastClickedButton.setTextColor(getResources().getColor(R.color.white));
         }
-        currentButton.setTextColor(getResources().getColor(R.color.eminence));
+        currentButton.setTextColor(getResources().getColor(R.color.sage));
         lastClickedButton = currentButton;
 
         String category = currentButton.getText().toString();
